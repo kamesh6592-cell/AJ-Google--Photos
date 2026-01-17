@@ -58,28 +58,28 @@ export const QRCodeCard: React.FC<QRCodeCardProps> = ({ config }) => {
   }, [config]);
 
   return (
-    <div className="flex flex-col items-center select-none bg-[#000000] w-[450px] h-[720px] pt-[90px] pb-[60px] px-6">
+    <div className="flex flex-col items-center justify-center select-none bg-[#000000] w-[450px] h-[720px] py-12 px-6">
       {/* Identity Branding - Optimized for Capture */}
-      <div className="flex flex-col items-center justify-center mb-12 w-full animate-in fade-in slide-in-from-top duration-700">
-        <div className="flex items-center gap-4 w-full justify-center px-4">
-          <span className="text-3xl leading-none select-none drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] shrink-0">❤️</span>
-          <div className="max-w-[340px]">
-            <h2 className="text-[#FFFFFF] text-4xl font-black tracking-tight uppercase leading-[1.2] text-center whitespace-normal break-words">
+      <div className="flex flex-col items-center justify-center mb-16 w-full animate-in fade-in slide-in-from-top duration-700">
+        <div className="flex items-center gap-5 w-full justify-center px-4">
+          <span className="text-4xl leading-none select-none drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] shrink-0">❤️</span>
+          <div className="flex-1 max-w-[300px]">
+            <h2 className="text-[#FFFFFF] text-[2.75rem] font-black tracking-tight uppercase leading-[1.1] text-center break-words">
               {config.name || 'YOUR NAME'}
             </h2>
           </div>
-          <span className="text-3xl leading-none select-none drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] shrink-0">❤️</span>
+          <span className="text-4xl leading-none select-none drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] shrink-0">❤️</span>
         </div>
         
-        <div className="mt-5 w-[220px] h-px bg-gradient-to-r from-transparent via-[#222222] to-transparent" />
+        <div className="mt-6 w-[240px] h-px bg-gradient-to-r from-transparent via-[#333333] to-transparent" />
         
-        <p className="text-[#8A8A8E] text-[11px] font-black tracking-[0.6em] uppercase mt-4 opacity-90 text-center">
+        <p className="text-[#8A8A8E] text-xs font-black tracking-[0.5em] uppercase mt-5 opacity-90 text-center">
           {config.subtitle || 'MEMORIES HUB'}
         </p>
       </div>
 
       {/* Main QR Card Container */}
-      <div className="bg-[#FFFFFF] p-7 rounded-[64px] shadow-[0_40px_100px_rgba(0,0,0,0.6)] border border-[#ffffff10] mb-14">
+      <div className="bg-[#FFFFFF] p-7 rounded-[64px] shadow-[0_40px_100px_rgba(0,0,0,0.6)] border border-[#ffffff10] mb-12">
         <div 
           ref={qrRef} 
           className="rounded-[44px] overflow-hidden bg-white"
@@ -87,10 +87,10 @@ export const QRCodeCard: React.FC<QRCodeCardProps> = ({ config }) => {
         />
       </div>
 
-      {/* Footer Text - Fixed Visibility & Perfect Rhythm */}
-      <div className="mt-auto text-center w-full px-4 pb-4 animate-in fade-in slide-in-from-bottom duration-1000">
+      {/* Footer Text - Perfect Positioning */}
+      <div className="text-center w-full px-4 animate-in fade-in slide-in-from-bottom duration-1000">
         <p className="text-[#8A8A8E] text-2xl font-bold tracking-tight leading-relaxed max-w-[360px] mx-auto">
-          Scan the QR code to see your memories.
+          Scan to see your memories
         </p>
       </div>
     </div>
