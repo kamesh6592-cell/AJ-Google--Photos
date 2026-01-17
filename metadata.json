@@ -1,0 +1,5 @@
+{
+  "name": "Social QR Generator",
+  "description": "Generate stylish, social-media style QR codes with custom names, profile pictures, and dotted patterns exactly like the provided reference.",
+  "requestFramePermissions": []
+}
